@@ -1,0 +1,283 @@
+@import url("style.css");
+@import url("parceiros.css");
+
+body {
+    background-color: #ffffff;
+}
+/*Nossa Historia*/
+.conteudo-nossa-historia {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+}
+
+.nossa-historia {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.nossa-historia-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nossa-historia-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #6f6f6f;
+}
+
+.nossa-historia-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.nossa-historia-subtitulo-verde {
+    color: #00A859;
+}
+
+.nossa-historia-descricao {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6f6f6f;
+}
+
+.nossa-historia-fachada img {
+    width: 545px;
+    margin-left: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-nossa-historia {
+        padding: 30px;
+    }
+
+    .nossa-historia {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nossa-historia-texto {
+        align-items: center;
+    }
+
+    .nossa-historia-titulo {
+        font-size: 18px;
+    }
+
+    .nossa-historia-subtitulo {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .nossa-historia-fachada img {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/*Nossos Princípios*/
+.conteudo-nossos-principios {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.nossos-principios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nossos-principios-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.nossos-principios-titulo-verde {
+    color: #00A859;
+}
+.nossos-principios-container {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    max-width: 1200px;
+}
+
+.nossos-principios-cartao {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.nossos-principios-cartao i {
+    font-size: 50px;
+    color: #00A859;
+    margin-bottom: 10px;
+}
+
+.nossos-principios-cartao h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+.nossos-principios-cartao p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    color: #6f6f6f;
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-nossos-principios {
+        padding: 30px;
+    }
+
+    .nossos-principios {
+        flex-direction: column;
+    }
+
+    .nossos-principios-titulo {
+        font-size: 30px;
+    }
+
+    .nossos-principios-container {
+        flex-direction: column;
+    }
+}
+/*Carousel*/
+.conteudo-carousel {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-div {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.carousel-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.carousel-texto-verde {
+    color: #00a859;
+}
+
+.carousel-texto-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.carousel-texto-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6f6f6f;
+    margin-right: 90px;
+}
+
+.carousel-texto-btn {
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #00a859;
+    border-radius: 30px;
+    padding: 8px 25px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel .btn-prev {left: 10px;}
+.carousel .btn-next {right: 10px;}
+
+@media screen and (max-width: 768px) {
+    .conteudo-carousel {
+        padding: 30px;
+    }
+
+    .carousel-div {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .carousel-texto {
+        align-items: center;
+    }
+
+    .carousel-texto h2 {
+        font-size: 30px;
+    }
+
+    .carousel-texto p {
+        font-size: 16px;
+        margin-right: 0;
+    }
+
+    .carousel-texto button {
+        font-size: 14px;
+    }
+}

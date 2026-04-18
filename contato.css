@@ -1,0 +1,207 @@
+@import url(parceiros.css);
+
+body {
+    background-color: #ffffff;
+}
+/*Banner Pagina Contato*/
+.cabecalho-banner-contato {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    background: linear-gradient(#006535ed, #006535ed), url(assets/banner-pagina.jpg);
+    background-size: cover;
+    background-position: 0px -80px;
+    justify-content: center;
+    text-align: center;
+    height: 330px;
+}
+.cabecalho-banner-titulo-2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho-banner-contato {
+        padding: 30px;
+        height: 180px;
+        background-position: -50px 0px;
+    }
+
+    .cabecalho-banner-titulo-2 {
+        font-size: 30px;
+    }
+}
+/*Texto e Lista*/
+.lista-e-formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+}
+
+.lista-e-formulario-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lista-e-formulario-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.lista-e-formulario-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.lista-e-formulario-titulo-verde {
+    color: #00a859;
+}
+
+.lista-e-formulario-texto p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2b2b2b;
+}
+
+.lista-e-formulario-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #4e4e4e;
+    list-style: none;
+}
+
+.lista-e-formulario-lista i {
+    color: #00a859;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .lista-e-formulario {
+        padding: 30px;
+    }
+
+    .lista-e-formulario-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lista-e-formulario-titulo {
+        font-size: 30px;
+    }
+
+    .lista-e-formulario-texto p {
+        font-size: 16px;
+    }
+
+    .lista-e-formulario-lista {
+        font-size: 16px;
+    }
+}
+/*Formulario*/
+.lista-e-formulario-form-texto {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 0px 0px 7px 0px #00000029;
+    padding: 40px;
+    gap: 10px;
+    width: 47%;
+}
+
+.lista-e-formulario-form-texto p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2b2b2b;
+}
+
+.lista-e-formulario-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-e-formulario-form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #2b2b2b;
+}
+
+.lista-e-formulario-form input, textarea, select {
+    background-color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cecece70;
+    resize: vertical;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.lista-e-formulario-form input:focus,
+.lista-e-formulario-form textarea:focus,
+.lista-e-formulario-form select:focus {
+    border-color: #00a859;
+    outline: none;
+}
+
+.lista-e-formulario-form-btn {
+    background-color: #00a859;
+    color: #ffffff;
+    padding: 9px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cecece00;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lista-e-formulario-form-btn:hover {
+    background-color: #00b460;
+}
+
+@media screen and (max-width: 768px) {
+    .lista-e-formulario-form-texto {
+        padding: 20px;
+        width: auto;
+    }
+
+    .lista-e-formulario-form-texto p {
+        font-size: 16px;
+    }
+
+    .lista-e-formulario-form label {
+        font-size: 14px;
+    }
+
+    .lista-e-formulario-form input, textarea, select {
+        font-size: 14px;
+    }
+
+    .lista-e-formulario-form-btn {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,362 @@
+@import url("style.css");
+
+body {
+    background-color: #ffffff;
+}
+/*Banner Pagina*/
+.cabecalho-banner {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    background: linear-gradient(#006535ed, #006535ed), url(assets/banner-pagina.jpg);
+    background-size: cover;
+    background-position: 0px -80px;
+    justify-content: center;
+    text-align: center;
+    height: 560px;
+}
+
+.cabecalho-banner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.cabecalho-banner-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cabecalho-banner-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 47px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cabecalho-banner-descricao {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho-banner {
+        padding: 30px;
+        height: 265px;
+        background-position: -170px 0px;
+    }
+
+    .cabecalho-banner-container {
+        padding: 0px;
+    }
+
+    .cabecalho-banner-titulo {
+        font-size: 17px;
+    }
+
+    .cabecalho-banner-subtitulo {
+        font-size: 30px;
+    }
+
+    .cabecalho-banner-descricao {
+        font-size: 16px;
+    } 
+}
+/*Fabricantes*/
+.conteudo-fabricantes {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.fabricantes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fabricantes-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.fabricantes-titulo-verde {
+    color: #00a859;
+}
+
+.fabricantes-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6f6f6f;
+}
+
+.conteudo-marcas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.cartao-marcas {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 0px #00000029;
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    gap: 20px;
+}
+
+.cartao-marcas img {
+    max-width: 175px;
+    height: auto;
+    margin: auto;
+}
+
+.cartao-marcas p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #353535;
+    margin-bottom: 15px;
+}
+
+.cartao-marcas:hover {
+    border-color: #00a859;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0px 2px 5px 0px #0000004d;
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-fabricantes {
+        padding: 30px;
+    }
+
+    .fabricantes-titulo {
+        font-size: 30px;
+    }
+
+    .fabricantes-subtitulo {
+        font-size: 16px;
+    }
+
+    .conteudo-marcas {
+        grid-template-columns: auto;
+    }
+
+    .cartao-marcas img {
+        max-width: 170px;
+    }
+}
+/*Garantia Estendida*/
+.conteudo-estendida {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.garantia-estendida {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.garantia-estendida-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.garantia-estendida-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6f6f6f;
+}
+
+.garantia-estendida-titulo-verde {
+    color: #00a859;
+}
+
+.conteudo-seguradoras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1200px;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.cartao-estendida {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 2px solid transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 0px #00000029;
+    text-align: center;
+    color: inherit;
+    gap: 20px;
+}
+
+.cartao-estendida img {
+    max-width: 250px;
+    height: auto;
+    margin: auto;
+}
+
+.cartao-estendida p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #353535;
+    margin-bottom: 15px;
+}
+
+.cartao-estendida:hover {
+    border-color: #00a859;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0px 2px 5px 0px #0000004d;
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-estendida {
+        padding: 30px;
+    }
+
+    .garantia-estendida-titulo {
+        font-size: 30px;
+    }
+
+    .garantia-estendida-subtitulo {
+        font-size: 16px;
+    }
+
+    .conteudo-seguradoras {
+        grid-template-columns: auto;
+    }
+
+    .cartao-estendida img {
+        max-width: 200px;
+    }
+}
+/*Soluções multimarcas*/
+.conteudo-multimarcas {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    align-items: center;
+    background-color: #008044;
+    clip-path: polygon(0 0, 49% 0, 50% 24px, 51% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.solucoes-multimarcas {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 900px;
+}
+
+.solucoes-multimarcas-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.solucoes-multimarcas-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.solucoes-multimarcas-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    max-width: 590px;
+}
+
+.whatsapp-sm {
+    margin-right: 5px;
+}
+
+.solucoes-multimarcas-btn {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #008044;
+    border-radius: 30px;
+    border: none;
+    padding: 8px 25px;
+    cursor: pointer;
+}
+
+.solucoes-multimarcas button:hover {
+    background-color: #f0f0f0;
+}
+
+.solucoes-multimarcas-imagem img {
+    width: 287px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-multimarcas {
+        padding: 30px;
+    }
+
+    .solucoes-multimarcas {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .solucoes-multimarcas-texto {
+        align-items: center;
+        gap: 15px;
+    }
+
+    .solucoes-multimarcas-titulo {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .solucoes-multimarcas-subtitulo {
+        font-size: 16px;
+    }
+
+    .solucoes-multimarcas-imagem img {
+        width: 255px;
+    }
+}

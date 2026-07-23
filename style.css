@@ -485,6 +485,7 @@ html {
     display: flex;
     flex-direction: column;
     padding: 70px;
+    overflow: hidden;
 }
 
 .equipamentos-conteudo {

@@ -185,6 +185,13 @@ sr.reveal('.primeiro-conteudo h1, .primeiro-conteudo p, .primeiro-conteudo img',
 sr.reveal('.diferenciais h2, .diferenciais-subtitulo, .cartao-de-servico', { duration: 2500 });
 sr.reveal('.contador-geral, .contador-descricao', { duration: 2500 });
 sr.reveal('.depoimentos h2, .depoimentos p, .depoimentos-secao', { duration: 2500 });
+sr.reveal('.equipamentos h2, .equipamentos p', { duration: 2500 });
+sr.reveal('.equipamentos img', {
+    distance: '1400px',
+    origin: 'right',
+    duration: 1500,
+    easing: 'ease'
+});
 sr.reveal('.autorizada h2, .autorizada p', { duration: 2500 });
 sr.reveal('.autorizada img', {
     distance: '1400px',

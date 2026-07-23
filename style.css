@@ -350,7 +350,7 @@ html {
 
 .cartao-de-servico i {
     font-size: 40px;
-    padding: 25px;
+    margin: 25px;
 }
 
 .cartao-de-servico:nth-child(odd) {
@@ -421,11 +421,12 @@ html {
 .contador-secao {
     display: flex;
     flex-direction: row;
-    gap: 205px;
+    gap: 125px;
 }
 
 .contador-geral {
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-size: 17px;
     color: #ffffff;
@@ -477,6 +478,69 @@ html {
 
     .contador-descricao {
         font-size: 14px;
+    }
+}
+/*C3.2*/
+.equipamentos {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+}
+
+.equipamentos-conteudo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.equipamentos-conteudo-titulo {
+    font-family: "Poppins", Sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.equipamentos-conteudo-titulo-verde {
+    color: #00a859;
+}
+
+.equipamentos-conteudo-subtitulo {
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6f6f6f;
+}
+.equipamentos-conteudo-imagem {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .equipamentos {
+        padding: 30px;
+    }
+
+    .equipamentos-conteudo {
+        gap: 15px;
+    }
+
+    .equipamentos-conteudo-titulo {
+        font-size: 30px;
+    }
+
+    .equipamentos-conteudo-subtitulo {
+        font-size: 16px;
+    }
+
+    .equipamentos-conteudo-imagem {
+        max-width: 100%;
+        height: auto;
     }
 }
 /*C4*/
@@ -788,7 +852,7 @@ input, textarea, select {
     border-radius: 30px;
     border-width: 1px;
     border-style: solid;
-    border-color: #f7f7f7;
+    border-color: #cecece70;
     background-color: #f7f7f7;
     resize: vertical;
     font-size: 15px;

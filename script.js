@@ -1,5 +1,17 @@
-/*Copyright Ano*/
+/*Ano Copyright*/
 document.getElementById("ano").textContent = new Date().getFullYear();
+
+/*Anos de Mercado*/
+const hoje = new Date();
+const fezAniversario = hoje.getMonth() > 0 || (hoje.getMonth() === 0 && hoje.getDate() >= 15)
+const anos = hoje.getFullYear() - 1987 - (fezAniversario ? 0 : 1);
+
+document.querySelectorAll(".anos-de-mercado").forEach(el => {
+    el.setAttribute("data-valor", anos);
+    if (!el.classList.contains("numero")) {
+        el.textContent = anos;
+    }
+});
 
 /*Faq Menu*/
 document.addEventListener("DOMContentLoaded", function() {
@@ -275,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex++;
             limitIndex();
             updateSlider();
-        }, 6000); // Tempo de mudar o slide
+        }, 5000); // Tempo de mudar o slide
     }
 
     function stopAutoPlay() {

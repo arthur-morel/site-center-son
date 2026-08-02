@@ -342,10 +342,30 @@ html {
 .cartao-de-servico {
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px 0px #0000001A;
-    border-width: 0px 0px 4px 0px;
-    border-style: solid;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    transition: all .35s ease;
+}
+
+.cartao-de-servico:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+.cartao-de-servico:hover::before{
+    opacity: 1;
+}
+
+.cartao-de-servico:hover::after{
+    left: 180%;
+}
+
+.cartao-de-servico > *{
+    position: relative;
+    z-index: 3;
 }
 
 .cartao-de-servico i {
@@ -367,6 +387,11 @@ html {
     font-weight: 600;
     color: #6f6f6f;
     margin-bottom: 15px;
+    transition: color .35s ease;
+}
+
+.cartao-de-servico:hover h3{
+    color: #00a859;
 }
 
 .cartao-de-servico p {
@@ -374,13 +399,6 @@ html {
     font-size: 15px;
     font-weight: 400;
     color: #6f6f6f;
-}
-
-.cartao-de-servico img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 768px) {

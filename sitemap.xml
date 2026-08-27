@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://grmcenterson.com.br/</loc>
+    <loc>https://centerson.tv.br/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://grmcenterson.com.br/parceiros/</loc>
+    <loc>https://centerson.tv.br/parceiros/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://grmcenterson.com.br/nossa-historia/</loc>
+    <loc>https://centerson.tv.br/nossa-historia/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://grmcenterson.com.br/contato/</loc>
+    <loc>https://centerson.tv.br/contato/</loc>
     <priority>0.80</priority>
   </url>
 </urlset>

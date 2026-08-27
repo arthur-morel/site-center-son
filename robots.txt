@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grmcenterson.com.br/sitemap.xml
+Sitemap: https://centerson.tv.br/sitemap.xml

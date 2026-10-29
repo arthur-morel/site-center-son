@@ -193,15 +193,14 @@ sr.reveal('.equipamentos img', {
     easing: 'ease'
 });
 sr.reveal('.autorizada h2, .autorizada p', { duration: 2500 });
-sr.reveal('.autorizada img', {
+sr.reveal('.autorizada button', { duration: 2500 });
+sr.reveal('.autorizada-conteudo-slider', {
     distance: '1400px',
     origin: 'left',
     duration: 1500,
-    opacity: 1,
+    opacity: 0,
     easing: 'ease-out'
 });
-sr.reveal('.autorizada button', { duration: 2500 });
-sr.reveal('.autorizada h2, .autorizada p', { duration: 2500 });
 sr.reveal('.faq h2, .faq-subtitulo', { duration: 2500 });
 sr.reveal('.faq-lista', {
     distance: '1400px',
@@ -258,7 +257,47 @@ sr.reveal('.carousel', {
     easing: 'ease'
 });
 
-/*Slider*/
+/*Slider Index*/
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector(
+        '.logomarca-autorizadas-secao'
+    );
+
+    if (!track || track.dataset.clonado === 'true') return;
+
+    const logos = Array.from(track.querySelectorAll(
+        ':scope > .logomarca-autorizadas'
+    ));
+
+    if (!logos.length) return;
+
+    const criarGrupo = (duplicado = false) => {
+        const grupo = document.createElement('div');
+        grupo.className = 'logomarca-grupo';
+
+        logos.forEach((logo) => {
+            const imagem = logo.cloneNode(true);
+
+            if (duplicado) {
+                imagem.alt = '';
+                imagem.setAttribute('aria-hidden', 'true');
+            }
+
+            grupo.appendChild(imagem);
+        });
+
+        return grupo;
+    };
+
+    track.replaceChildren(
+        criarGrupo(),
+        criarGrupo(true)
+    );
+
+    track.dataset.clonado = 'true';
+});
+
+/*Slider Nossa Hisoria*/
 document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector('.slide-web');
     const slides = document.querySelectorAll('.slide');

@@ -595,14 +595,72 @@ html {
     color: #6f6f6f;
 }
 
+.autorizada-conteudo-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 12px 0;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 5%,
+        #000 95%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 5%,
+        #000 95%,
+        transparent
+    );
+}
+
 .logomarca-autorizadas-secao {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    width: max-content;
+    animation: deslizar-logomarcas 60s linear infinite;
+    will-change: transform;
+}
+
+.logomarca-grupo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 60px;
+    padding-right: 60px;
 }
 
 .logomarca-autorizadas {
+    display: block;
+    flex: 0 0 187px;
     width: 187px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logomarca-autorizadas:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 4px 5px rgb(0 0 0 / 15%));
+}
+
+.logomarca-autorizadas-secao:has(.logomarca-autorizadas:hover) {
+    animation-play-state: paused;
+}
+
+.autorizada-conteudo-marcas-texto {
+    max-width: 900px;
+    margin: 0 auto 10px;
+    color: #6f6f6f;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.7;
 }
 
 .autorizada-conteudo-botao {
@@ -622,6 +680,16 @@ html {
     background-color: #00b460;
 }
 
+@keyframes deslizar-logomarcas {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .autorizada {
         padding: 30px;
@@ -639,12 +707,54 @@ html {
         font-size: 16px;
     }
 
+    .logomarca-autorizadas-slider {
+        margin: 20px 0;
+    }
+
     .logomarca-autorizadas-secao {
-        flex-direction: column;
+        gap: 0;
+        animation-duration: 30s;
+    }
+
+     .logomarca-grupo {
+        gap: 35px;
+        padding-right: 35px;
+    }
+
+    .logomarca-autorizadas {
+        flex-basis: 160px;
+        width: 160px;
+    }
+
+    .autorizada-conteudo-marcas-texto {
+        font-size: 14px;
     }
 
     .autorizada-conteudo-botao {
         font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logomarca-autorizadas-secao {
+        animation: none;
+        transform: none;
+        will-change: auto;
+    }
+
+    /* Exibe apenas uma sequência, sem animação */
+    .logomarca-grupo + .logomarca-grupo {
+        display: none;
+    }
+
+    .autorizada-conteudo-slider {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .logomarca-autorizadas {
+        transition: none;
     }
 }
 /*FAQ*/
@@ -961,7 +1071,7 @@ input, textarea, select {
     cursor: pointer;
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #00a859;
     font-size: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -1211,7 +1321,7 @@ input, textarea, select {
     .rodape-container-2 {
         flex-direction: column;
         width: auto;
-        gap: 10px;
+        gap: 20px;
     }
 
     .rodape-logo img {
